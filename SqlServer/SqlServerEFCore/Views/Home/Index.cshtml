@@ -1,22 +1,24 @@
 ﻿@model IEnumerable<TestData>
-@{
-    ViewData["Title"] = "Azure Sql Server";
-}
-<h2>Test data queried from Azure Sql Server:</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <td>Id</td>
-            <td>Data</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var td in Model)
-        {
+    @{
+        ViewData["Title"] = "Azure Sql Server";
+    }
+    <div class="jumbotron">
+        <h2>Test data queried from Azure Sql Server:</h2>
+    </div>
+    <table class="table">
+        <thead>
             <tr>
-                <td>@td.Id</td>
-                <td>@td.Data</td>
+                <td>Id</td>
+                <td>Data</td>
             </tr>
-        }
-</tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var td in Model)
+            {
+                <tr>
+                    <td>@td.Id</td>
+                    <td>@td.Data</td>
+                </tr>
+            }
+        </tbody>
+    </table>
